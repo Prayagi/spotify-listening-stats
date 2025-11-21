@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mini Listening Stats</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+
+<div class="container">
+
+    <div class="hero">
+        <img src="https://cdn-icons-png.flaticon.com/512/727/727240.png" class="logo">
+        <h1 class="title">Mini Listening Stats</h1>
+        <p class="subtitle">A beautiful Spotify-style analysis of your listening history.</p>
+    </div>
+
+    <div class="upload-card glass">
+        <h2>Upload Your Spotify Data</h2>
+        <p class="desc">Select your <strong>StreamingHistory.json</strong> file from Spotify’s data export.</p>
+
+        <form action="{{ url_for('analyze') }}" method="POST" enctype="multipart/form-data">
+            <label class="custom-file-upload">
+                <input type="file" name="file" accept=".json" required>
+                Choose File
+            </label>
+            <button class="btn">Analyze</button>
+        </form>
+
+        <p class="hint">
+            Need help? Go to <b>Spotify Account → Privacy</b> → Request your data.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

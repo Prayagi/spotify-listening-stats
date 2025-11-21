@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Your Listening Summary</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+
+<div class="result-container">
+
+    <div class="result-card glass">
+
+        <h1 class="title lime">Your Listening Summary</h1>
+
+        <!-- Stats Row -->
+        <div class="stats-row">
+
+            <div class="stat-card">
+                <h3>Total Minutes</h3>
+                <p class="stat-value">{{ total }}</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Top Song</h3>
+                <p class="stat-value">{{ top_song.song }}</p>
+                <p class="stat-small">{{ top_song.artist }} • {{ top_song.mins }} mins</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Top Artist</h3>
+                <p class="stat-value">{{ top_artist.artist }}</p>
+                <p class="stat-small">{{ top_artist.mins }} mins</p>
+            </div>
+
+        </div>
+
+        <!-- Top 3 Section -->
+        <h2 class="top3-heading">Top 3 Songs</h2>
+
+        <div class="top3-list">
+            {% for s in top3 %}
+            <div class="top3-item glass-soft">
+                <div class="left">
+                    <p class="song-name">{{ s.song }}</p>
+                    <p class="song-artist">{{ s.artist }}</p>
+                </div>
+                <div class="song-mins">{{ s.mins }} mins</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Back Button -->
+        <a href="{{ url_for('index') }}" class="back-btn">← Analyze another file</a>
+
+    </div>
+</div>
+
+</body>
+</html>

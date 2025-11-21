@@ -1,0 +1,255 @@
+/* ---------------- GLOBAL ---------------- */
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #e3e8e5;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* Animated gradient background */
+.bg-gradient {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(120deg, 
+        rgba(182,255,119,0.25), 
+        rgba(60,255,160,0.12), 
+        rgba(0,0,0,0.5),
+        rgba(152,255,74,0.18)
+    );
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------------- LAYOUT ---------------- */
+
+.container {
+    max-width: 780px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero .logo {
+    width: 80px;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px rgba(152,255,74,0.3));
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #b6ff77, #c9ff95);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 15px;
+}
+
+.subtitle {
+    font-size: 17px;
+    opacity: 0.75;
+    margin-top: 6px;
+}
+
+/* ---------------- GLASS CARD ---------------- */
+
+.glass {
+    background: rgba(255,255,255,0.07);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 35px;
+    box-shadow: 0 0 35px rgba(0,0,0,0.4);
+    transition: 0.25s ease;
+}
+
+.glass:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 40px rgba(152,255,74,0.12);
+}
+
+/* ---------------- UPLOAD ---------------- */
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 12px 22px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(182,255,119,0.45);
+    background: rgba(182,255,119,0.15);
+    color: #d7ffd0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.custom-file-upload:hover {
+    background: rgba(182,255,119,0.25);
+    transform: scale(1.05);
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.btn {
+    margin-top: 18px;
+    padding: 12px 26px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #b6ff77, #d6ff9f);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: #000;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(182,255,119,0.45);
+}
+
+.desc {
+    margin-bottom: 20px;
+    color: #d5e9d0;
+    opacity: 0.85;
+}
+
+.hint {
+    margin-top: 15px;
+    font-size: 12.5px;
+    color: #b9d4b2;
+    opacity: 0.7;
+}
+/* ---------------- RESULT PAGE ---------------- */
+
+.result-container {
+    max-width: 900px;
+    margin: 120px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.result-card {
+    width: 100%;
+    max-width: 750px;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Stats row */
+.stats-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 180px;
+    padding: 20px;
+    border-radius: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.09);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(182,255,119,0.2);
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #d6ffb0;
+    margin-top: 6px;
+}
+
+.stat-small {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 6px;
+}
+
+/* Top 3 */
+.top3-heading {
+    margin-top: 30px;
+    font-size: 28px;
+    color: #c9ff95;
+}
+
+.top3-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.glass-soft {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 15px 20px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.25s ease;
+}
+
+.glass-soft:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(182,255,119,0.15);
+}
+
+.song-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #e9ffe0;
+}
+
+.song-artist {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-top: 3px;
+}
+
+.song-mins {
+    font-size: 16px;
+    font-weight: 700;
+    color: #baff86;
+}
+
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-top: 25px;
+    color: #b6ff77;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 18px;
+    border: 1px solid rgba(182,255,119,0.3);
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.back-btn:hover {
+    background: rgba(182,255,119,0.2);
+    box-shadow: 0 0 15px rgba(182,255,119,0.2);
+}

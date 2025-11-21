@@ -1,0 +1,32 @@
+[
+  {
+    "endTime": "2023-10-01 20:00",
+    "artistName": "Arijit Singh",
+    "trackName": "Kesariya",
+    "msPlayed": 210000
+  },
+  {
+    "endTime": "2023-10-01 20:04",
+    "artistName": "Ed Sheeran",
+    "trackName": "Shape of You",
+    "msPlayed": 250000
+  },
+  {
+    "endTime": "2023-10-02 09:10",
+    "artistName": "Arijit Singh",
+    "trackName": "Heeriye",
+    "msPlayed": 200000
+  },
+  {
+    "endTime": "2023-10-02 09:18",
+    "artistName": "Imagine Dragons",
+    "trackName": "Believer",
+    "msPlayed": 180000
+  },
+  {
+    "endTime": "2023-10-03 15:20",
+    "artistName": "Arijit Singh",
+    "trackName": "Kesariya",
+    "msPlayed": 260000
+  }
+]
